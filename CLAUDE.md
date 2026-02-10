@@ -31,9 +31,10 @@ stride/
 ## Current Status
 
 - **Phase**: 1 — Foundation
-- **Last completed**: Project scaffolding (Rails API + Next.js + shadcn/ui + PostgreSQL + CORS)
-- **In progress**: Authentication (Devise + JWT)
-- **Next up**: Auth endpoints, frontend auth pages
+- **Last completed**: Backend auth — Devise + JWT controllers, routes, models, migrations
+- **In progress**: Auth endpoint testing (signup 500 fixed, needs verification)
+- **Next up**: Test auth endpoints, then build frontend auth pages (login, signup, protected routes)
+- **Note**: Use `frontend-design` plugin for login/signup UI
 - **Known issues**: None
 - **See full plan**: [docs/PLAN.md](docs/PLAN.md)
 
