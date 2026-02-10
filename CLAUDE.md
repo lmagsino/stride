@@ -30,10 +30,10 @@ stride/
 
 ## Current Status
 
-- **Phase**: 0 — Spec & Documentation
-- **Last completed**: All spec docs created
-- **In progress**: —
-- **Next up**: Phase 1 — Project scaffolding (Rails API + Next.js)
+- **Phase**: 1 — Foundation
+- **Last completed**: Project scaffolding (Rails API + Next.js + shadcn/ui + PostgreSQL + CORS)
+- **In progress**: Authentication (Devise + JWT)
+- **Next up**: Auth endpoints, frontend auth pages
 - **Known issues**: None
 - **See full plan**: [docs/PLAN.md](docs/PLAN.md)
 

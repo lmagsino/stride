@@ -5,12 +5,12 @@
 ## Phase 1: Foundation
 
 ### 1.1 Project Scaffolding
-- [ ] Initialize Rails 7.2 API-mode app (`backend/`)
-- [ ] Initialize Next.js 15 app with TypeScript + Tailwind + shadcn/ui (`frontend/`)
-- [ ] Configure CORS (Rails → Next.js)
-- [ ] Set up PostgreSQL database
-- [ ] Configure environment variables (.env files)
-- [ ] Add .gitignore for both apps
+- [x] Initialize Rails 7.1 API-mode app (`backend/`)
+- [x] Initialize Next.js 15 app with TypeScript + Tailwind + shadcn/ui (`frontend/`)
+- [x] Configure CORS (Rails → Next.js)
+- [x] Set up PostgreSQL database
+- [x] Configure environment variables (.env files)
+- [x] Add .gitignore for both apps
 - [ ] PWA manifest + service worker setup (Next.js)
 
 ### 1.2 Authentication
