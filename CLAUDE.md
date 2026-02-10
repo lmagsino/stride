@@ -7,7 +7,7 @@ AI-powered running coach — simple training plans, smart logging, shareable pro
 | Layer      | Tech                                                  |
 | ---------- | ----------------------------------------------------- |
 | Frontend   | Next.js 15 (App Router), TypeScript, Tailwind, shadcn/ui, PWA |
-| Backend    | Ruby on Rails 7.2+ (API mode), PostgreSQL             |
+| Backend    | Ruby on Rails 7.1 (API mode), PostgreSQL              |
 | AI         | Claude API (Anthropic) — training plans & run recaps  |
 | Auth       | Devise + JWT                                          |
 | Deployment | Vercel (frontend) + Render or Fly.io (backend)        |
@@ -60,6 +60,16 @@ npm run build                 # production build
 npm run test                  # run tests
 ```
 
+## Plugins & Skills
+
+Available plugins to accelerate development. **Always announce to the user when using a plugin.**
+
+| Plugin / Skill        | When to Use                                      |
+| --------------------- | ------------------------------------------------ |
+| `frontend-design`     | Every UI page and component — polished, production-grade design |
+| `/commit`             | After each feature — generate clean commit messages |
+| `/review`             | Before moving to next phase — code quality check  |
+
 ## Rules
 
 1. **Update this file** after completing each major feature or task
@@ -67,3 +77,4 @@ npm run test                  # run tests
 3. **Commit often** with conventional commit messages
 4. **Never break the build** — test before committing
 5. When resuming a session, read `Current Status` above and `docs/PLAN.md` to know where to pick up
+6. **Always announce plugin usage** — tell the user before invoking any plugin/skill
