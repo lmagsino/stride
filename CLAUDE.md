@@ -31,9 +31,9 @@ stride/
 ## Current Status
 
 - **Phase**: 1 — Foundation
-- **Last completed**: Profile API — RunnerProfile/RaceHistory models, migrations, CRUD endpoints
-- **In progress**: Phase 1.3 — Frontend onboarding flow (multi-step form)
-- **Next up**: Onboarding UI (Steps 1-4), then profile view/edit page
+- **Last completed**: Phase 1.3 — Frontend onboarding flow (4-step form with profile API integration)
+- **In progress**: None
+- **Next up**: Frontend profile view/edit page, then Phase 2 (AI Training Plans)
 - **Known issues**: None
 - **See full plan**: [docs/PLAN.md](docs/PLAN.md)
 

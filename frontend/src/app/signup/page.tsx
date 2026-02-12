@@ -38,7 +38,7 @@ export default function SignupPage() {
 
     try {
       await signup(name, email, password, passwordConfirmation);
-      router.push("/dashboard");
+      router.push("/onboarding");
     } catch (err) {
       if (err instanceof ApiError) {
         const details = err.data.error.details;

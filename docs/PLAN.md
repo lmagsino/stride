@@ -27,11 +27,11 @@
 - [x] RunnerProfile model + migration
 - [x] RaceHistory model + migration
 - [x] Profile API endpoints (CRUD)
-- [ ] Frontend: Onboarding flow (multi-step form)
-  - [ ] Step 1: Basic info (name, experience level)
-  - [ ] Step 2: Current fitness (weekly mileage, recent races)
-  - [ ] Step 3: Training preferences (available days, long run day)
-  - [ ] Step 4: Injury notes
+- [x] Frontend: Onboarding flow (multi-step form)
+  - [x] Step 1: Experience level (beginner/intermediate/advanced cards)
+  - [x] Step 2: Current fitness (weekly mileage, race history)
+  - [x] Step 3: Training preferences (available days, long run day)
+  - [x] Step 4: Injury notes + review summary
 - [ ] Frontend: Profile view/edit page
 
 ## Phase 2: Core — AI Training Plans

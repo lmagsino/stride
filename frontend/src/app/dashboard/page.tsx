@@ -4,15 +4,24 @@ import { useAuth } from "@/contexts/auth-context";
 import { ProtectedRoute } from "@/components/protected-route";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 function DashboardContent() {
   const { user, logout } = useAuth();
   const router = useRouter();
 
+  useEffect(() => {
+    if (user && !user.has_profile) {
+      router.replace("/onboarding");
+    }
+  }, [user, router]);
+
   async function handleLogout() {
     await logout();
     router.push("/login");
   }
+
+  if (user && !user.has_profile) return null;
 
   return (
     <div className="min-h-screen bg-[#080808] text-white p-8">

@@ -174,3 +174,8 @@
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
 }
+
+/* Progress bar orange indicator */
+[data-slot="progress"].progress-orange [data-slot="progress-indicator"] {
+  background: oklch(0.705 0.213 47.604);
+}
