@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_02_10_104330) do
+ActiveRecord::Schema[7.1].define(version: 2026_02_12_092233) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,30 @@ ActiveRecord::Schema[7.1].define(version: 2026_02_10_104330) do
     t.string "jti", null: false
     t.datetime "exp", null: false
     t.index ["jti"], name: "index_jwt_denylist_on_jti"
+  end
+
+  create_table "race_histories", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "race_name"
+    t.decimal "distance_km", null: false
+    t.integer "finish_time_secs", null: false
+    t.date "race_date", null: false
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_race_histories_on_user_id"
+  end
+
+  create_table "runner_profiles", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "experience_level", default: 0, null: false
+    t.decimal "current_weekly_km", default: "0.0", null: false
+    t.integer "available_days", default: 3, null: false
+    t.integer "preferred_long_run_day", default: 6, null: false
+    t.text "injury_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_runner_profiles_on_user_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,4 +57,6 @@ ActiveRecord::Schema[7.1].define(version: 2026_02_10_104330) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "race_histories", "users"
+  add_foreign_key "runner_profiles", "users"
 end
