@@ -21,7 +21,7 @@
 - [x] Frontend: Login page
 - [x] Frontend: Sign up page
 - [x] Frontend: Protected route wrapper
-- [ ] Token refresh handling
+- [x] Token refresh handling
 
 ### 1.3 User Profile & Onboarding
 - [ ] RunnerProfile model + migration
