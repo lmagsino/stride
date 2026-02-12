@@ -13,13 +13,11 @@ module Api
           }, status: :ok
         end
 
-        def respond_to_on_destroy
-          if current_user
+        def respond_to_on_destroy(*_args)
+          if request.env["warden-jwt_auth.token_revoked"]
             render json: { message: "Logged out successfully" }, status: :ok
           else
-            render json: {
-              error: { code: "unauthorized", message: "No active session" }
-            }, status: :unauthorized
+            render json: { message: "Logged out successfully" }, status: :ok
           end
         end
 

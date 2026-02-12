@@ -30,4 +30,9 @@ Devise.setup do |config|
   end
 
   config.navigational_formats = []
+
+  # Use custom failure app for JSON error responses
+  config.warden do |manager|
+    manager.failure_app = CustomFailureApp
+  end
 end

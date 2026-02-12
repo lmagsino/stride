@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
+  # Devise auth routes — kept outside namespace to use :user scope,
+  # but path is set to /api/v1/auth for correct URL structure.
+  devise_for :users,
+    path: "api/v1/auth",
+    path_names: { sign_in: "login", sign_out: "logout", registration: "signup" },
+    controllers: {
+      sessions: "api/v1/auth/sessions",
+      registrations: "api/v1/auth/registrations"
+    }
+
   namespace :api do
     namespace :v1 do
-      # Auth
-      devise_for :users,
-        path: "auth",
-        path_names: { sign_in: "login", sign_out: "logout", registration: "signup" },
-        controllers: {
-          sessions: "api/v1/auth/sessions",
-          registrations: "api/v1/auth/registrations"
-        }
-
       namespace :auth do
         get "me", to: "current_user#show"
       end

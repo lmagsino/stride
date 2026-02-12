@@ -14,9 +14,9 @@
 - [ ] PWA manifest + service worker setup (Next.js)
 
 ### 1.2 Authentication
-- [ ] Install and configure Devise (Rails)
-- [ ] Set up JWT token authentication (devise-jwt or custom)
-- [ ] Auth endpoints: POST /signup, POST /login, DELETE /logout, GET /me
+- [x] Install and configure Devise (Rails)
+- [x] Set up JWT token authentication (devise-jwt or custom)
+- [x] Auth endpoints: POST /signup, POST /login, DELETE /logout, GET /me
 - [ ] Frontend: Auth context/provider
 - [ ] Frontend: Login page
 - [ ] Frontend: Sign up page
