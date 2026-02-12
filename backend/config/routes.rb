@@ -15,6 +15,11 @@ Rails.application.routes.draw do
         get "me", to: "current_user#show"
       end
 
+      # Profile
+      resource :profile, only: [:show, :update] do
+        resources :race_histories, only: [:create, :destroy]
+      end
+
       # Health check
       get "health", to: "health#show"
     end
