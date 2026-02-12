@@ -13,6 +13,7 @@ type AuthContextType = AuthState & {
   login: (email: string, password: string) => Promise<void>;
   signup: (name: string, email: string, password: string, passwordConfirmation: string) => Promise<void>;
   logout: () => Promise<void>;
+  refreshUser: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -100,6 +101,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     scheduleExpiry(token);
   };
 
+  const refreshUser = async () => {
+    try {
+      const { user } = await authApi.me();
+      setState({ user, isLoading: false, isAuthenticated: true });
+    } catch {
+      // If refresh fails, keep existing state
+    }
+  };
+
   const logout = async () => {
     try {
       await authApi.logout();
@@ -110,7 +120,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ ...state, login, signup, logout }}>
+    <AuthContext.Provider value={{ ...state, login, signup, logout, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );
