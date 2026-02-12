@@ -124,3 +124,53 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Stride — auth page animations */
+@keyframes streak {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 oklch(0.705 0.213 47.604 / 0);
+  }
+  50% {
+    box-shadow: 0 0 24px 4px oklch(0.705 0.213 47.604 / 0.15);
+  }
+}
+
+.animate-streak {
+  animation: streak 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
