@@ -31,9 +31,9 @@ stride/
 ## Current Status
 
 - **Phase**: 1 — Foundation
-- **Last completed**: Frontend auth — login/signup pages (frontend-design plugin), auth context, protected routes, API client
-- **In progress**: Token refresh handling (Phase 1.2 final item)
-- **Next up**: Phase 1.3 — User Profile & Onboarding (RunnerProfile model, onboarding flow)
+- **Last completed**: Profile API — RunnerProfile/RaceHistory models, migrations, CRUD endpoints
+- **In progress**: Phase 1.3 — Frontend onboarding flow (multi-step form)
+- **Next up**: Onboarding UI (Steps 1-4), then profile view/edit page
 - **Known issues**: None
 - **See full plan**: [docs/PLAN.md](docs/PLAN.md)
 

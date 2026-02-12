@@ -24,9 +24,9 @@
 - [x] Token refresh handling
 
 ### 1.3 User Profile & Onboarding
-- [ ] RunnerProfile model + migration
-- [ ] RaceHistory model + migration
-- [ ] Profile API endpoints (CRUD)
+- [x] RunnerProfile model + migration
+- [x] RaceHistory model + migration
+- [x] Profile API endpoints (CRUD)
 - [ ] Frontend: Onboarding flow (multi-step form)
   - [ ] Step 1: Basic info (name, experience level)
   - [ ] Step 2: Current fitness (weekly mileage, recent races)
