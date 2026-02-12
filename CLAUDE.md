@@ -31,10 +31,9 @@ stride/
 ## Current Status
 
 - **Phase**: 1 — Foundation
-- **Last completed**: Backend auth — Devise + JWT controllers, routes, models, migrations
-- **In progress**: Auth endpoint testing (signup 500 fixed, needs verification)
-- **Next up**: Test auth endpoints, then build frontend auth pages (login, signup, protected routes)
-- **Note**: Use `frontend-design` plugin for login/signup UI
+- **Last completed**: Frontend auth — login/signup pages (frontend-design plugin), auth context, protected routes, API client
+- **In progress**: Token refresh handling (Phase 1.2 final item)
+- **Next up**: Phase 1.3 — User Profile & Onboarding (RunnerProfile model, onboarding flow)
 - **Known issues**: None
 - **See full plan**: [docs/PLAN.md](docs/PLAN.md)
 

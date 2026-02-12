@@ -17,10 +17,10 @@
 - [x] Install and configure Devise (Rails)
 - [x] Set up JWT token authentication (devise-jwt or custom)
 - [x] Auth endpoints: POST /signup, POST /login, DELETE /logout, GET /me
-- [ ] Frontend: Auth context/provider
-- [ ] Frontend: Login page
-- [ ] Frontend: Sign up page
-- [ ] Frontend: Protected route wrapper
+- [x] Frontend: Auth context/provider
+- [x] Frontend: Login page
+- [x] Frontend: Sign up page
+- [x] Frontend: Protected route wrapper
 - [ ] Token refresh handling
 
 ### 1.3 User Profile & Onboarding
